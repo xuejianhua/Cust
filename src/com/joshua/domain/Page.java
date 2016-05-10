@@ -53,11 +53,11 @@ public class Page {
 		this.nextPage = nextPage;
 	}
 
-	public int getCountrow() {
+	public int getCountRow() {
 		return countRow;
 	}
 
-	public void setCountrow(int countRow) {
+	public void setCountRow(int countRow) {
 		this.countRow = countRow;
 	}
 

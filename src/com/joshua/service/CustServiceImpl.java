@@ -80,7 +80,7 @@ public class CustServiceImpl implements CustService {
 		int countRow = dao.getCountRow();
 		// total pages
 		int countPage = countRow / rowPerPage + (countRow % rowPerPage == 0 ? 0 : 1);
-		page.setCountrow(countRow);
+		page.setCountRow(countRow);
 		page.setCountPage(countPage);
 		// previous page
 		page.setPrePage(thisPage == 1 ? 1 : thisPage - 1);
