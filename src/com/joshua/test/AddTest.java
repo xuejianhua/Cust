@@ -13,7 +13,7 @@ public class AddTest {
 		String sql = "insert into customer values(null,?,?,?,?,?,?,?,?)";
 
 		QueryRunner runner = new QueryRunner(DaoUtils.getSource());
-		for(int i=0;i<10;i++){
+		for(int i=0;i<30;i++){
 			runner.update(sql,"name"+i,"male","1994-1-1","13333","55555","swimming","vip","dddsdfsfdsfs");
 		}
 	}

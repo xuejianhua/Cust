@@ -9,5 +9,6 @@
 	<h1>Customer Management System</h1><hr>
 	<a href="${pageContext.request.contextPath}/addCust.jsp">add a customer</a>
 	<a href="${pageContext.request.contextPath}/CustListServlet">all customers</a>
+	<a href="${pageContext.request.contextPath}/CustPageServlet?thisPage=1">paging</a>
 </body>
 </html>

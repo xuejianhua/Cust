@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.joshua.domain.Cust;
+import com.joshua.domain.Page;
 
 public interface CustService {
 	/**
@@ -43,5 +44,20 @@ public interface CustService {
 	 * @throws SQLException 
 	 */
 	void batchDel(String[] ids);
+	
+	/**
+	 *search for custs by conditions
+	 * @param cust
+	 * @return
+	 */
+	List<Cust> findCustByCond(Cust cust);
 
+	/**
+	 * searching for custs by paging
+	 * @param thisPage current page
+	 * @param rowPerPage rows of every page
+	 * @return
+	 */
+	Page pageCust(int thisPage, int rowPerPage);
+	
 }

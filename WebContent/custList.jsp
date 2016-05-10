@@ -16,10 +16,24 @@
 </head>
 <body>
 	<div align="center">
+		<h1>Customer Management System__All Customers</h1><hr>
+		<form action="${pageContext.request.contextPath }/FindCustByCondServlet">
+			name:<input type="text" name="name" value="${param.name }"/>
+			gender:
+				<input type="radio" name="gender" value="male" <c:if test="${param.gender=='male' }">checked="checked"</c:if>>male
+				<input type="radio" name="gender" value="female" <c:if test="${param.gender=='female' }">checked="checked"</c:if>>female
+			type:<select name="type">
+					<option value=""></option>	
+					<option value="vip" <c:if test="${param.type=='vip' }">selected="selected"</c:if>>vip</option>
+					<option value="ip" <c:if test="${param.type=='ip' }">selected="selected"</c:if>>ip</option>
+					<option value="normal" <c:if test="${param.type=='normal' }">selected="selected"</c:if>>normal</option>
+					<option value="new" <c:if test="${param.type=='new' }">selected="selected"</c:if>>new</option>
+				</select>
+			<input type="submit" value="search"/>
+		</form>
+	
 		<form action="${pageContext.request.contextPath }/BatchDelServlet"
 			method="post">
-			<h1>Customer Management System__All Customers</h1>
-			<hr>
 			<table border="1" width="100%">
 				<tr>
 					<th><input type="checkbox" onclick="checkAll(this)" /></th>

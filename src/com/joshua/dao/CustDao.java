@@ -53,6 +53,24 @@ public interface CustDao {
 	 */
 	void deleteInfoByIdWithTrans(Connection conn, String id) throws SQLException;
 
-	
+	/**
+	 * search for custs by name,gender,type
+	 * @param cust
+	 * @return
+	 */
+	List<Cust> findCustByBond(Cust cust);
 
+	/**
+	 * count how many rows
+	 * @return
+	 */
+	int getCountRow();
+
+	/**
+	 * search for certain amounts of custs from where
+	 * @param from
+	 * @param count
+	 * @return
+	 */
+	List<Cust> getCustByPage(int from, int count);
 }
